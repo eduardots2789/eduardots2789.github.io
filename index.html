@@ -2,17 +2,127 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Loja do Servidor PvP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAC Server - Loja & Ranking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #111; color: white; text-align: center; font-family: Arial; padding-top: 50px; }
-        .botao { background-color: #ff4500; color: white; padding: 20px 40px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 20px; }
+        /* Reset e Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: #0f0f0f; 
+            color: #ffffff; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Container Principal */
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; text-align: center; }
+
+        /* Header e Imagem */
+        .header-img {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1533558701576-23c65e0272fb?q=80&w=1000&auto=format&fit=crop'); /* Imagem de helicóptero genérica */
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #ff4500;
+        }
+
+        h1 { font-size: 24px; margin-bottom: 10px; color: #ff4500; text-transform: uppercase; letter-spacing: 2px; }
+        p { color: #ccc; font-size: 14px; margin-bottom: 30px; }
+
+        /* Estilo dos Botões */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #ff4500, #ff8c00);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+        }
+
+        .btn:active { transform: scale(0.98); }
+        .btn i { margin-right: 15px; font-size: 20px; }
+
+        .btn-secondary {
+            background: #222;
+            border: 1px solid #444;
+            box-shadow: none;
+        }
+
+        /* Galeria de Itens */
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 30px;
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        .item-card {
+            background: #252525;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            border-bottom: 3px solid #ff4500;
+        }
+
+        .item-card i { font-size: 24px; color: #ff4500; margin-bottom: 5px; display: block; }
+
+        /* Footer */
+        footer { margin-top: 40px; font-size: 12px; color: #666; padding-bottom: 20px; }
+        .heart { color: #ff4500; }
     </style>
 </head>
 <body>
-    <h1>Bem-vindo à Loja Oficial</h1>
-    <p>Para liberar helicópteros vips e armas, clique no botão abaixo:</p>
-    <br><br>
-    <a href="COLE_SEU_LINK_AQUI" class="botao">ACESSAR LOJA / APOIAR</a>
-    <p style="margin-top: 50px; font-size: 12px; color: #555;">Ao clicar, você ajuda a manter o servidor online!</p>
+
+<div class="container">
+    <div class="header-img"></div>
+
+    <h1>Bem-vindo à Loja</h1>
+    <p>Para manter o servidor online e liberar conteúdos exclusivos, escolha uma opção abaixo:</p>
+
+    <a href="COLE_SEU_LINK_MONETAG_AQUI" class="btn">
+        <i class="fas fa-shopping-cart"></i> ACESSAR LOJA / RESGATAR VIP
+    </a>
+
+    <a href="COLE_SEU_LINK_MONETAG_OU_ENCURTADOR_AQUI" class="btn btn-secondary">
+        <i class="fas fa-trophy"></i> VER RANKING DE PILOTOS
+    </a>
+
+    <h3 style="margin-top: 30px; font-size: 16px;">Conteúdo Exclusivo:</h3>
+    <div class="items-grid">
+        <div class="item-card">
+            <i class="fas fa-helicopter"></i>
+            Heli Destrancado
+        </div>
+        <div class="item-card">
+            <i class="fas fa-gun"></i>
+            Armas Raras
+        </div>
+        <div class="item-card">
+            <i class="fas fa-shield-alt"></i>
+            Colete Full
+        </div>
+    </div>
+
+    <footer>
+        Ao acessar, você ajuda a manter o servidor online <i class="fas fa-heart heart"></i>
+    </footer>
+</div>
+
 </body>
 </html>
