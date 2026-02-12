@@ -1,129 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta http-equiv="refresh" content="3; URL='https://omg10.com/4/10600580'"/>
+    <meta http-equiv="refresh" content="15; URL='https://omg10.com/4/10600580'"/>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="210627" async data-cfasync="false"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAC Server - Loja & Ranking</title>
+    <title>LAC Server - Oficial</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Reset e Base */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background-color: #0f0f0f; 
-            color: #ffffff; 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-        }
+        body { background-color: #0b0b0b; color: #fff; font-family: 'Segoe UI', sans-serif; line-height: 1.6; }
+        .container { max-width: 500px; margin: 0 auto; padding: 15px; }
 
-        /* Container Principal */
-        .container { max-width: 500px; margin: 0 auto; padding: 20px; text-align: center; }
-
-        /* Header e Imagem */
+        /* Header */
         .header-img {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), 
-                        url('https://play-lh.googleusercontent.com/o2-16UdJ0jYg9L4Sh7uwafr_GzHzYmrbn96Sp7RSpMtqUiO1kNOTxUgvycR1BiZrdy4'); /* Imagem de helicóptero genérica */
-            background-size: cover;
-            background-position: center;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            border: 2px solid #ff4500;
+            width: 100%; height: 230px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, #0b0b0b), 
+                        url('https://images.unsplash.com/photo-1540962351504-03099e0a75c3?q=80&w=1000');
+            background-size: cover; background-position: center;
+            border-radius: 20px; border: 2px solid #ff4500; margin-bottom: 15px;
         }
 
-        h1 { font-size: 24px; margin-bottom: 10px; color: #ff4500; text-transform: uppercase; letter-spacing: 2px; }
-        p { color: #ccc; font-size: 14px; margin-bottom: 30px; }
+        h1 { font-size: 26px; color: #ff4500; text-transform: uppercase; text-align: center; text-shadow: 0 0 10px rgba(255,69,0,0.5); }
+        .sub-text { color: #aaa; font-size: 14px; text-align: center; margin-bottom: 25px; }
 
-        /* Estilo dos Botões */
+        /* Botões */
         .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(45deg, #ff4500, #ff8c00);
-            color: white;
-            text-decoration: none;
-            padding: 18px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 15px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: none;
-            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+            display: flex; align-items: center; justify-content: center;
+            padding: 18px; border-radius: 15px; margin-bottom: 12px;
+            text-decoration: none; font-weight: bold; font-size: 17px;
+            transition: 0.3s; color: white; border: none;
         }
+        .btn-vip { background: linear-gradient(45deg, #00c853, #b2ff59); color: #000; box-shadow: 0 0 15px rgba(0,200,83,0.4); }
+        .btn-main { background: linear-gradient(45deg, #ff4500, #ff8c00); box-shadow: 0 0 15px rgba(255,69,0,0.4); }
+        .btn i { margin-right: 12px; font-size: 20px; }
 
-        .btn:active { transform: scale(0.98); }
-        .btn i { margin-right: 15px; font-size: 20px; }
+        /* Seções */
+        .section { background: #151515; padding: 20px; border-radius: 15px; margin-top: 25px; text-align: left; border: 1px solid #222; }
+        .section h2 { color: #ff4500; font-size: 18px; margin-bottom: 15px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        .info-list { list-style: none; }
+        .info-list li { margin-bottom: 10px; font-size: 14px; display: flex; align-items: center; }
+        .info-list li i { color: #ff4500; margin-right: 10px; width: 20px; text-align: center; }
 
-        .btn-secondary {
-            background: #222;
-            border: 1px solid #444;
-            box-shadow: none;
-        }
+        /* Barra de Carregamento (10s) */
+        .load-bg { width: 100%; background: #222; height: 6px; border-radius: 10px; margin: 15px 0; overflow: hidden; }
+        .load-fill { width: 0%; height: 100%; background: #ff4500; animation: fill 15s linear forwards; }
+        @keyframes fill { to { width: 100%; } }
 
-        /* Galeria de Itens */
-        .items-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 30px;
-            background: #1a1a1a;
-            padding: 15px;
-            border-radius: 15px;
-        }
-
-        .item-card {
-            background: #252525;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 11px;
-            border-bottom: 3px solid #ff4500;
-        }
-
-        .item-card i { font-size: 24px; color: #ff4500; margin-bottom: 5px; display: block; }
-
-        /* Footer */
-        footer { margin-top: 40px; font-size: 12px; color: #666; padding-bottom: 20px; }
-        .heart { color: #ff4500; }
+        footer { text-align: center; padding: 30px; color: #444; font-size: 12px; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header-img"></div>
+    <h1 id="txt-title">LOJA OFICIAL LAC</h1>
+    <p class="sub-text" id="txt-sub">O melhor servidor do LAC</p>
 
-    <h1>Bem-vindo à Loja</h1>
-    <p>Para manter o servidor online e liberar conteúdos exclusivos, escolha uma opção abaixo:</p>
-
-    <a href="https://omg10.com/4/10600580" class="btn">
-        <i class="fas fa-shopping-cart"></i> ACESSAR LOJA / RESGATAR VIP
+    <a href="https://omg10.com/4/10600580" class="btn btn-vip" id="btn-free">
+        <i class="fas fa-gift"></i> OBTER VIP GRÁTIS
     </a>
 
-    <a href="https://omg10.com/4/10600580" class="btn btn-secondary">
-        <i class="fas fa-trophy"></i> VER RANKING
+    <a href="https://omg10.com/4/10600580" class="btn btn-main" id="btn-store">
+        <i class="fas fa-shopping-cart"></i> ACESSAR LOJA / APOIAR
     </a>
 
-    <h3 style="margin-top: 30px; font-size: 16px;">Conteúdo Exclusivo:</h3>
-    <div class="items-grid">
-        <div class="item-card">
-            <i class="fas fa-helicopter"></i>
-            Helicóptero
-        </div>
-        <div class="item-card">
-            <i class="fas fa-gun"></i>
-            Armas Raras
-        </div>
-        <div class="item-card">
-            <i class="fas fa-shield-alt"></i>
-            Colete Full
-        </div>
+    <div class="load-bg"><div class="load-fill"></div></div>
+
+    <div class="section">
+        <h2 id="sec-info">Informações</h2>
+        <ul class="info-list" id="list-info">
+            <li><i class="fas fa-server"></i> <span>Host: LemeHost</span></li>
+            <li><i class="fas fa-users"></i> <span>Slots: 35 Jogadores</span></li>
+            <li><i class="fas fa-map-marked-alt"></i> <span>Brasil PVP Extreme</span></li>
+            <li><i class="fas fa-shield-alt"></i> <span>Anti-Hack: Ativado</span></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 id="sec-rules">Regras</h2>
+        <ul class="info-list" id="list-rules">
+            <li><i class="fas fa-gavel"></i> <span>Sem Cheats/Mod Menu</span></li>
+            <li><i class="fas fa-comment-slash"></i> <span>Sem Spam ou Ofensas</span></li>
+            <li><i class="fas fa-helicopter"></i> <span>Não destruir no Spawn</span></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 id="sec-how">Como obter VIP?</h2>
+        <p id="txt-desc" style="font-size: 13px; color: #ccc;"></p>
     </div>
 
     <footer>
-        Ao acessar, você ajuda a manter o servidor online <i class="fas fa-heart heart"></i>
+        &copy; 2026 Brasil PVP - Todos os direitos reservados.
     </footer>
 </div>
+
+<script>
+    const lang = navigator.language || navigator.userLanguage;
+    const content = {
+        'pt': { 
+            title: "LOJA OFICIAL LAC", sub: "Vip free ↓", free: "OBTER VIP GRÁTIS", store: "LOJA / APOIAR",
+            info: "Informações", rules: "Regras Gerais", how: "Como obter VIP?",
+            i1: "Host: LemeHost (Provisória)", i2: "Slots: 35 Jogadores", i3: "Mapa: Brasil PVP Extreme", i4: "Anti-Hack: Ativado",
+            r1: "Proibido uso de Cheats/Mod Menu.", r2: "Proibido spam ou ofensas no chat.", r3: "Não destruir helicópteros no spawn.",
+            desc: "Para ganhar a tag VIP e armas raras, clique no botão verde acima, complete a verificação e envie o print para o dono."
+        },
+        'es': { 
+            title: "TIENDA OFICIAL LAC", sub: "Vip free ↓", free: "OBTENER VIP GRATIS", store: "TIENDA / APOYAR",
+            info: "Información", rules: "Reglas Generales", how: "¿Cómo obtener VIP?",
+            i1: "Host: LemeHost (Provisional)", i2: "Slots: 35 Jugadores", i3: "Mapa: Brasil PVP Extreme", i4: "Anti-Hack: Activado",
+            r1: "Prohibido el uso de Cheats/Mod Menu.", r2: "Prohibido spam u ofensas en el chat.", r3: "No destruir helicópteros en el spawn.",
+            desc: "Para obtener el tag VIP y armas raras, haz clic en el botón verde arriba, completa la verificación e envia captura al dueño."
+        },
+        'en': { 
+            title: "LAC OFFICIAL STORE", sub: "Vip free ↓", free: "GET FREE VIP", store: "STORE / SUPPORT",
+            info: "Server Info", rules: "General Rules", how: "How to get VIP?",
+            i1: "Host: LemeHost (Temporary)", i2: "Slots: 35 Players", i3: "Map: Brazil PVP Extreme", i4: "Anti-Cheat: Enabled",
+            r1: "No Cheats or Mod Menus allowed.", r2: "No spam or insults in chat.", r3: "Do not destroy helicopters at spawn.",
+            desc: "To earn the VIP tag and rare weapons, click the green button above, complete the verification and send the screenshot to the owner."
+        }
+    };
+
+    let t = content['en']; 
+    if(lang.startsWith('pt')) t = content['pt'];
+    if(lang.startsWith('es')) t = content['es'];
+
+    document.getElementById('txt-title').innerText = t.title;
+    document.getElementById('txt-sub').innerText = t.sub;
+    document.getElementById('btn-free').innerHTML = `<i class="fas fa-gift"></i> ${t.free}`;
+    document.getElementById('btn-store').innerHTML = `<i class="fas fa-shopping-cart"></i> ${t.store}`;
+    document.getElementById('sec-info').innerText = t.info;
+    document.getElementById('sec-rules').innerText = t.rules;
+    document.getElementById('sec-how').innerText = t.how;
+    document.getElementById('txt-desc').innerText = t.desc;
+    
+    // Tradução das Listas
+    const infoItems = document.querySelectorAll('#list-info span');
+    infoItems[0].innerText = t.i1;
+    infoItems[1].innerText = t.i2;
+    infoItems[2].innerText = t.i3;
+    infoItems[3].innerText = t.i4;
+
+    const ruleItems = document.querySelectorAll('#list-rules span');
+    ruleItems[0].innerText = t.r1;
+    ruleItems[1].innerText = t.r2;
+    ruleItems[2].innerText = t.r3;
+</script>
 
 </body>
 </html>
